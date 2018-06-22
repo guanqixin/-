@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='data.js'></script>
+    <script src='jquery.min.js'></script>
+
+</head>
+
+<body>
+    <ul id='box'>
+        <li>
+            <h3>点击</h3>
+        </li>
+    </ul>
+    <div class='g'>
+        <ul class='box1'>
+
+        </ul>
+        <ul class="box2">
+        </ul>
+    </div>
+    <script>
+        var str = '';
+        var str1 = '';
+        and(data, str)
+
+        function and(data) {
+            data.forEach(function(v) {
+                str += '<li><h3>' + v.kpName + '</h3>'
+            });
+        }
+        $('.box1').append(str);
+        $('h3').on('click', function() {
+            $(this).parent().parent().next().children().eq(0).toggleClass('active');
+        });
+    </script>
+</body>
+
+</html>
